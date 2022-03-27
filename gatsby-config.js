@@ -6,5 +6,17 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `notes`,
+        path: `${__dirname}/src/notes/`,
+      },
+    },
+  ],
+  siteMetadata: {
+    title: `Gatsby Basic`,
+    description: `Kick off your next, great Gatsby project with this default starter.`,
+  },
 }
